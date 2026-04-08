@@ -155,4 +155,89 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Premium Side Panel Logic (5k Feature) ---
+    const panelData = {
+        maestro: {
+            title: "Professor Paulo",
+            subtitle: "Head Coach & Cintura Nera",
+            image: "images/maestro.jpg",
+            content: "<p>Con anni di esperienza sul tatami e in competizioni internazionali, il Professor Paulo porta a Ferrara e Rovigo il vero spirito del Brazilian Jiu Jitsu.</p><p>Non solo un insegnante, ma una guida per ogni studente: dal principiante che muove i primi passi fino all'agonista più esperto. La sua filosofia unisce il duro lavoro al rispetto reciproco, creando un'accademia che è prima di tutto una grande famiglia.</p><ul><li>Cintura Nera Certificata e riconosciuta</li><li>Esperienza internazionale pluriennale in gara</li><li>Attenzione meticolosa allo sviluppo personale di ogni allievo</li></ul>"
+        },
+        'course-fundamentals': {
+            title: "BJJ Principianti",
+            subtitle: "Corso Iniziale",
+            image: "images/course-fundamentals.jpg",
+            content: "<p>Il corso BJJ Principianti è strutturato idealmente per chi parte completamente da zero e non ha mai praticato arti marziali.</p><p>Il nostro focus iniziale è su due elementi fondamentali: la tua sicurezza totale durante la pratica e l'apprendimento delle difese e dei movimenti base fondamentali.</p><ul><li>Nessuna precedente preparazione atletica richiesta</li><li>Miglioramento garantito di postura e flessibilità</li><li>Apprendimento in un ambiente cooperativo e non competitivo</li></ul>"
+        },
+        'course-advanced': {
+            title: "Intermedi / Agonisti",
+            subtitle: "Corso Avanzato",
+            image: "images/course-advanced.jpg",
+            content: "<p>Dedicato a chi ha già assimilato le basi del Brazilian Jiu Jitsu ed è pronto a un livello superiore di intensità e dettaglio tecnico.</p><p>In questo corso affondiamo lo studio su concatenazioni avanzate, tecniche specifiche di guardia e passaggi di guardia (Lasso, Spider, De La Riva, ecc.).</p><ul><li>Sparring (Roll) ad alta intensità a fine sessione</li><li>Studio approfondito e contestualizzato della tattica</li><li>Preparazione mirata per competizioni nazionali e internazionali</li></ul>"
+        },
+        'course-nogi': {
+            title: "Grappling (No-Gi)",
+            subtitle: "Senza Kimono",
+            image: "images/course-nogi.jpg",
+            content: "<p>Il No-Gi (o Grappling) è la forma di lotta che omette l'utilizzo del kimono tradizionale. L'assenza di prese dirette sui vestiti rende questa disciplina estremamente dinamica e basata su prese anatomiche (polsi, colli, caviglie).</p><p>È il complemento perfetto per chiunque voglia massimizzare le proprie capacità di wrestling, nonché l'allenamento ideale per chi pratica o vuole competere nelle MMA (Mixed Martial Arts).</p><ul><li>Altissimo tasso di consumo calorico garantito</li><li>Migliora esponenzialmente le capacità di scrambling</li><li>Più veloce ed esplosivo della lotta con il Gi</li></ul>"
+        },
+        'course-kids': {
+            title: "Kids & Anti-Bullismo",
+            subtitle: "Bambini & Ragazzi",
+            image: "images/course-kids.jpg",
+            content: "<p>Il nostro programma per bambini e ragazzi è molto più di un corso sportivo. Attraverso il gioco e la disciplina del BJJ, lavoriamo per fornire ai più giovani gli strumenti psicofisici adatti alla crescita.</p><p>Le tecniche di Jiu Jitsu insegnano come difendersi immobilizzando e controllando l'aggressore senza necessariamente dover sferrare colpi. Questo innalza enormemente il senso di sicurezza personale e disinnesca situazioni di bullismo alla radice.</p><ul><li>Divertimento garantito in un ambiente iper-sicuro</li><li>Forte sviluppo della coordinazione e della mobilità motoria</li><li>Crescita dell'autostima e del rispetto delle regole e del prossimo</li></ul>"
+        },
+        'course-cops': {
+            title: "BJJ Cops",
+            subtitle: "Per le Forze dell'Ordine",
+            image: "images/course-cops.jpg",
+            content: "<p>Questo corso speciale è progettato su misura per gli operatori della sicurezza, per le Forze Armate e per le Forze dell'Ordine che affrontano quotidianamente il rischio dello scontro fisico ravvicinato nel loro lavoro.</p><p>Il programma BJJ Cops si concentra sulla ritenzione dell'arma, sulla sopravvivenza in scenari di rissa, sul controllo a terra del sospetto e sulle tecniche incruente di ammanettamento collaborativo e non collaborativo.</p><ul><li>Garantisce un grado nettamente più alto di sicurezza operativa</li><li>Insegna a controllare efficacemente i soggetti non cooperativi limitando i danni a loro e agli operatori</li><li>Previene problematiche legali tramite l'uso proporzionato e consapevole della forza</li></ul>"
+        }
+    };
+
+    const triggers = document.querySelectorAll('.panel-trigger');
+    const sidePanel = document.getElementById('side-panel');
+    const sidePanelOverlay = document.getElementById('side-panel-overlay');
+    const closePanelBtn = document.getElementById('side-panel-close');
+    
+    // Elements to update
+    const pTitle = document.getElementById('side-panel-title');
+    const pSubtitle = document.getElementById('side-panel-subtitle');
+    const pDesc = document.getElementById('side-panel-desc');
+    const pImage = document.getElementById('side-panel-image');
+
+    const openPanel = (id) => {
+        const data = panelData[id];
+        if (data && sidePanel) {
+            pTitle.innerHTML = data.title;
+            pSubtitle.innerHTML = data.subtitle;
+            pDesc.innerHTML = data.content;
+            pImage.style.backgroundImage = `url('${data.image}')`;
+            
+            sidePanel.classList.add('active');
+            sidePanelOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // prevent scrolling
+        }
+    };
+
+    const closePanel = () => {
+        if(sidePanel) {
+            sidePanel.classList.remove('active');
+            sidePanelOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    if(triggers.length > 0) {
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const id = trigger.getAttribute('data-panel-id');
+                if(id) openPanel(id);
+            });
+        });
+    }
+
+    if(closePanelBtn) closePanelBtn.addEventListener('click', closePanel);
+    if(sidePanelOverlay) sidePanelOverlay.addEventListener('click', closePanel);
+
 });

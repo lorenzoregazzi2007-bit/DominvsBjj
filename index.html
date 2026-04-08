@@ -137,7 +137,7 @@
     <section class="master-section" id="maestro">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image reveal">
+                <div class="about-image reveal panel-trigger" data-panel-id="maestro">
                     <div class="image-wrapper">
                         <!-- Immagine del Professor Paulo -->
                         <div class="image-placeholder"
@@ -203,7 +203,7 @@
 
             <div class="grid courses-grid">
                 <!-- Course 1 -->
-                <div class="course-card reveal" style="transition-delay: 0.1s;">
+                <div class="course-card reveal panel-trigger" data-panel-id="course-fundamentals" style="transition-delay: 0.1s;">
                     <div class="course-img"
                         style="background-image: url('images/course-fundamentals.jpg'); background-position: center 20%;">
                     </div>
@@ -219,7 +219,7 @@
                     </div>
                 </div>
                 <!-- Course 2 -->
-                <div class="course-card reveal" style="transition-delay: 0.2s;">
+                <div class="course-card reveal panel-trigger" data-panel-id="course-advanced" style="transition-delay: 0.2s;">
                     <div class="course-img"
                         style="background-image: url('images/course-advanced.jpg'); background-position: center 30%;">
                     </div>
@@ -235,7 +235,7 @@
                     </div>
                 </div>
                 <!-- Course 3 -->
-                <div class="course-card reveal" style="transition-delay: 0.3s;">
+                <div class="course-card reveal panel-trigger" data-panel-id="course-nogi" style="transition-delay: 0.3s;">
                     <div class="course-img"
                         style="background-image: url('images/course-nogi.jpg'); background-position: center 15%;">
                     </div>
@@ -251,7 +251,7 @@
                     </div>
                 </div>
                 <!-- Course 4 -->
-                <div class="course-card reveal" style="transition-delay: 0.4s;">
+                <div class="course-card reveal panel-trigger" data-panel-id="course-kids" style="transition-delay: 0.4s;">
                     <div class="course-img"
                         style="background-image: url('images/course-kids.jpg'); background-position: center 10%;">
                     </div>
@@ -267,7 +267,7 @@
                     </div>
                 </div>
                 <!-- Course 5 -->
-                <div class="course-card reveal" style="transition-delay: 0.5s;">
+                <div class="course-card reveal panel-trigger" data-panel-id="course-cops" style="transition-delay: 0.5s;">
                     <div class="course-img"
                         style="background-image: url('images/course-cops.jpg'); background-position: center 20%;">
                     </div>
@@ -419,6 +419,23 @@
             </div>
         </div>
     </footer>
+
+    <!-- Premium Side Panel (Off-Canvas Menu for Details) -->
+    <div class="side-panel-overlay" id="side-panel-overlay"></div>
+    <div class="side-panel" id="side-panel">
+        <button class="side-panel-close" id="side-panel-close"><i class="fas fa-times"></i></button>
+        <div class="side-panel-content">
+            <div class="side-panel-header">
+                <div class="side-panel-image" id="side-panel-image"></div>
+            </div>
+            <div class="side-panel-body">
+                <span class="side-panel-subtitle" id="side-panel-subtitle"></span>
+                <h3 class="side-panel-title" id="side-panel-title"></h3>
+                <div class="side-panel-desc" id="side-panel-desc"></div>
+                <a href="#prova" class="btn btn-primary mt-4 w-100" id="side-panel-cta"><i class="fab fa-whatsapp"></i> Prenota o chiedi info</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Script -->
     <script src="js/main.js"></script>
