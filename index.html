@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominvs BJJ | Brazilian Jiu Jitsu a Ferrara e Rovigo</title>
+    <meta name="description"
+        content="Il Brazilian Jiu Jitsu è un'arte marziale sempre più diffusa anche a Ferrara e Rovigo. Dominvs BJJ offre corsi di BJJ per chi vuole migliorare forma fisica, difesa personale e tecnica.">
+    <meta name="keywords"
+        content="bjj ferrara, bjj rovigo, brazilian jiu jitsu ferrara, jiu jitsu rovigo, palestra arti marziali">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Dominvs BJJ | Brazilian Jiu Jitsu a Ferrara e Rovigo">
+    <meta property="og:description"
+        content="Allenati con Dominvs BJJ: corsi per principianti e avanzati a Ferrara e Rovigo. Prenota una prova gratuita.">
+
+    <!-- Security Headers equivalent (in meta for basic setup, but real security needs HTTP headers) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader Cinematografico -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h2 class="logo preloader-logo">DOMINVS <span>BJJ</span></h2>
+            <div class="loader-line-wrapper">
+                <div class="loader-line"></div>
+            </div>
+            <p class="preloader-text">Preparazione al Tatami...</p>
+        </div>
+    </div>
+
+    <!-- Cookie Banner (GDPR Strict) -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <h4>Noi rispettiamo la tua privacy</h4>
+            <p>Utilizziamo esclusivamente cookie tecnici strettamente necessari al funzionamento del sito web e cookie
+                analitici anonimizzati, secondo i termini della nostra <a href="cookie-policy.html">Cookie Policy</a> e
+                <a href="privacy-policy.html">Privacy Policy</a>. Non utilizziamo cookie di profilazione senza il tuo
+                consenso.
+            </p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn btn-primary">Accetta Tutti</button>
+                <button id="necessary-cookies" class="btn btn-outline">Solo Necessari</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">DOMINVS <span>BJJ</span></a>
+            <div class="nav-right">
+                <div class="nav-overlay"></div>
+                <nav class="nav-links" id="nav-links">
+                    <div class="nav-header-mobile">
+                        <span class="logo mobile-logo">DOMINVS <span>BJJ</span></span>
+                        <button class="close-menu" aria-label="Chiudi menu"><i class="fas fa-times"></i></button>
+                    </div>
+                    <a href="#perche-noi" class="nav-link">Perché Noi</a>
+                    <a href="#maestro" class="nav-link">Il Maestro</a>
+                    <a href="#cose-bjj" class="nav-link">Cos'è il BJJ</a>
+                    <a href="#corsi" class="nav-link">I Corsi</a>
+                    <a href="#recensioni" class="nav-link">Recensioni</a>
+                    <a href="#contatti" class="nav-link">Contatti</a>
+                    <div class="nav-mobile-cta">
+                        <a href="https://wa.me/393444141009" target="_blank" class="btn btn-primary"><i
+                                class="fab fa-whatsapp"></i> Prova Ora</a>
+                    </div>
+                </nav>
+                <a href="https://wa.me/393444141009" target="_blank" class="btn btn-nav desktop-only"><i
+                        class="fab fa-whatsapp"></i> Prova Ora</a>
+                <button class="menu-toggle" aria-label="Apri menu"><span class="hamburger"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <!-- Segnaposto per immagine. Il cliente caricherà l'immagine hero.jpg nella cartella images -->
+        <div class="hero-bg" style="background-image: url('images/hero.jpg'); background-position: center 20%;"></div>
+        <div class="container hero-content">
+            <span class="badge">Sedi Attive: Ferrara & Rovigo</span>
+            <h1 class="hero-title">BJJ e Difesa Personale <br> Ferrara e Rovigo</h1>
+            <p class="hero-subtitle">Allenati con Dominvs BJJ: corsi per principianti e avanzati in un ambiente
+                professionale e di alto livello in entrambe le nostre palestre.</p>
+            <div class="hero-cta">
+                <a href="#prova" class="btn btn-primary btn-large">Prenota una prova gratuita</a>
+                <a href="#corsi" class="btn btn-outline btn-large">Scopri i corsi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perché Sceglierci -->
+    <section class="features" id="perche-noi">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Perché scegliere Dominvs BJJ?</h2>
+            <div class="grid features-grid">
+                <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                    <div class="feature-icon"><i class="fas fa-user-ninja"></i></div>
+                    <h3>Corsi per tutti i livelli</h3>
+                    <p>Dal principiante assoluto all'agonista esperto, c'è un posto per te sul nostro tatami.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                    <div class="feature-icon"><i class="fas fa-fist-raised"></i></div>
+                    <h3>Allenamento reale</h3>
+                    <p>Tecniche efficaci basate sulla pratica al 100%. Niente teoria inutile, ma arti marziali vere.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                    <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Due Sedi Attive</h3>
+                    <p>Puoi allenarti comodamente sia a Ferrara che nella nuovissima sede di Rovigo.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.4s;">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Disciplina e Forma Fisica</h3>
+                    <p>Migliora forza, elasticità mentale e sicurezza personale in un ambiente sano e accogliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Il Maestro -->
+    <section class="master-section" id="maestro">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <div class="image-wrapper">
+                        <!-- Immagine del Professor Paulo -->
+                        <div class="image-placeholder"
+                            style="background-image: url('images/maestro.jpg'); background-position: center 30%;"
+                            title="Il Professor Paulo">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text reveal" style="transition-delay: 0.2s;">
+                    <span class="section-subtitle">Il Nostro Maestro</span>
+                    <h2 class="section-title">Professor Paulo</h2>
+                    <p class="lead">Passione, dedizione e tecnica pura.</p>
+                    <p>Con anni di esperienza sui tatami e in competizione, il <strong>Professor Paulo</strong> porta a
+                        Ferrara e Rovigo il vero spirito del Brazilian Jiu Jitsu.</p>
+                    <p>Non solo un insegnante, ma una guida per ogni studente: dal principiante che muove i primi passi
+                        fino all'agonista più esperto. La sua filosofia unisce il duro lavoro al rispetto reciproco,
+                        creando un'accademia che è prima di tutto una grande famiglia.</p>
+                    <ul class="course-features mt-4">
+                        <li><i class="fas fa-medal"></i> Cintura Nera Certificata</li>
+                        <li><i class="fas fa-trophy"></i> Esperienza internazionale in gara</li>
+                        <li><i class="fas fa-users"></i> Attenzione allo sviluppo personale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cos'è il BJJ (SEO Focused) -->
+    <section class="about-bjj" id="cose-bjj">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <span class="section-subtitle">Oltre lo sport</span>
+                    <h2 class="section-title">La migliore difesa personale</h2>
+                    <p class="lead">Il <strong>Brazilian Jiu Jitsu</strong> è un'arte marziale in fortissima crescita in
+                        tutto il territorio di <strong>Ferrara e Rovigo</strong>.</p>
+                    <p>Basata sulla lotta a terra e le leve articolari, permette a una persona debole di sconfiggere un
+                        avversario più grande e forte grazie all'uso della tecnica e della fisica.</p>
+                    <p>Nelle nostre sedi di <strong>Ferrara</strong> e <strong>Rovigo</strong> offriamo molto più di un
+                        semplice corso: lavoriamo per migliorare drasticamente la forma fisica, la difesa personale e la
+                        consapevolezza del proprio corpo, il tutto assieme a una grande famiglia.</p>
+                    <a href="#prova" class="btn btn-primary mt-4">Vieni a provare</a>
+                </div>
+                <div class="about-image reveal">
+                    <div class="image-wrapper">
+                        <!-- Immagine di allenamento (es. due che lottano) caricata dal cliente come about.jpg -->
+                        <div class="image-placeholder"
+                            style="background-image: url('images/about.jpg'); background-position: center 50%;"
+                            title="Allenamento BJJ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corsi -->
+    <section class="courses-section" id="corsi">
+        <div class="container">
+            <h2 class="section-title text-center reveal">I Nostri Corsi</h2>
+            <p class="section-description text-center reveal">Programmi strutturati per accompagnarti in ogni fase del
+                tuo percorso marziale.</p>
+
+            <div class="grid courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card reveal" style="transition-delay: 0.1s;">
+                    <div class="course-img"
+                        style="background-image: url('images/course-fundamentals.jpg'); background-position: center 20%;">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-level">Novizi</span>
+                        <h3>BJJ Principianti</h3>
+                        <p>Impara i fondamenti, le leve e le difese di base. Nessuna preparazione atletica richiesta per
+                            iniziare.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Sicurezza totale in accademia</li>
+                            <li><i class="fas fa-check"></i> Postura e movimenti base</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="course-card reveal" style="transition-delay: 0.2s;">
+                    <div class="course-img"
+                        style="background-image: url('images/course-advanced.jpg'); background-position: center 30%;">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-level">Avanzati</span>
+                        <h3>BJJ Intermedi / Agonisti</h3>
+                        <p>Tecniche avanzate, sparring intenso (roll) e preparazione per competizioni nazionali e
+                            internazionali.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Sparring ad alta intensità</li>
+                            <li><i class="fas fa-check"></i> Tattica e studio delle guardie</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="course-card reveal" style="transition-delay: 0.3s;">
+                    <div class="course-img"
+                        style="background-image: url('images/course-nogi.jpg'); background-position: center 15%;">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-level">Tutti i livelli</span>
+                        <h3>No-Gi (Grappling)</h3>
+                        <p>Lotta senza Gi (kimono), basata sulla dinamica, la velocità. Perfetto complemento per chi
+                            pratica MMA.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Altissimo consumo calorico</li>
+                            <li><i class="fas fa-check"></i> Wrestling e Grappling moderno</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Course 4 -->
+                <div class="course-card reveal" style="transition-delay: 0.4s;">
+                    <div class="course-img"
+                        style="background-image: url('images/course-kids.jpg'); background-position: center 10%;">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-level">Bambini & Ragazzi</span>
+                        <h3>BJJ Kids Anti-Bullismo</h3>
+                        <p>Il corso perfetto per sviluppare la coordinazione, imparare il rispetto delle regole e
+                            sapersi difendere in modo sicuro e non violento.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Disciplina e gioco sicuro</li>
+                            <li><i class="fas fa-check"></i> Aumento fortissimo dell'autostima</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Course 5 -->
+                <div class="course-card reveal" style="transition-delay: 0.5s;">
+                    <div class="course-img"
+                        style="background-image: url('images/course-cops.jpg'); background-position: center 20%;">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-level">Forze dell'Ordine</span>
+                        <h3>BJJ Cops</h3>
+                        <p>Programma specifico per operatori della sicurezza. Impara tecniche di controllo tattico,
+                            ammanettamento e gestione del sospetto senza colpi.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Sicurezza operativa</li>
+                            <li><i class="fas fa-check"></i> Controllo incruento efficace</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 reveal">
+                <a href="#prova" class="btn btn-outline btn-large">Prenota la tua prima lezione</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recensioni -->
+    <section class="testimonials" id="recensioni">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Cosa dice chi si allena con noi</h2>
+            <div class="grid testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"La migliore palestra di BJJ a Ferrara. Istruttori preparatissimi e compagni
+                        d'allenamento che diventano subito amici. Consigliatissimo!"</p>
+                    <p class="reviewer">- Marco D.</p>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay: 0.1s;">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Ambiente serio ma accogliente. Ero fuori forma, ma il corso principianti mi
+                        ha rimesso in riga in pochi mesi senza essere buttato allo sbaraglio."</p>
+                    <p class="reviewer">- Andrea S.</p>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay: 0.2s;">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Perfetto anche per chi parte da zero assoluto. Cercavo un corso di arti
+                        marziali a Ferrara e ho trovato una vera e propria famiglia."</p>
+                    <p class="reviewer">- Luca P.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prova Gratuita (Conversion Section) -->
+    <section class="cta-section" id="prova">
+        <div class="container text-center reveal">
+            <h2 class="cta-title">Vieni a provare gratuitamente</h2>
+            <p class="cta-subtitle">Nessuna esperienza richiesta, la divisa te la prestiamo noi. Ti basta venire e
+                iniziare.</p>
+            <a href="https://wa.me/393444141009" target="_blank" class="btn btn-primary btn-huge pulse">
+                <i class="fab fa-whatsapp"></i> Prenota ora su WhatsApp
+            </a>
+            <p class="small-disclaimer mt-2">Rispondiamo tipicamente in meno di 1 ora.</p>
+        </div>
+    </section>
+
+    <!-- Contatti -->
+    <section class="contact" id="contatti">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h2 class="section-title">Le Nostre Sedi</h2>
+                    <ul class="contact-details">
+                        <li>
+                            <div class="icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <strong>Sede di Ferrara</strong>
+                                <p>Via di Esempio 123, 44121 Ferrara FE</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <strong>Sede di Rovigo</strong>
+                                <p>Via Nuova Sede 45, 45100 Rovigo RO<br><em>(Nuova apertura!)</em></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-wrap"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <strong>WhatsApp / Telefono</strong>
+                                <p><a href="https://wa.me/393444141009">+39 344 414 1009</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-wrap"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <strong>Orari di Apertura</strong>
+                                <p>Lun - Mer - Ven: 19:00 - 21:00<br>Mar - Gio: 18:30 - 20:30 (Principianti)</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="social-links mt-4">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="contact-map reveal">
+                    <div class="map-controls" style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <button class="btn btn-primary map-btn active" data-target="map-fe">Sede Ferrara</button>
+                        <button class="btn btn-outline map-btn" data-target="map-ro">Sede Rovigo</button>
+                    </div>
+
+                    <div id="map-fe" class="map-view">
+                        <!-- Mappa Ferrara (inserita dal cliente) -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.
+                  0162377103657!2d11.604907012040702!3d44.84160267094987!2m3!1f0!2f0!3f0!3m2
+                  !1i1024!2i768!4f13.1!3m3!1m2!1s0x477e4f2ab1cb6d5f%3A0x8fd356f040cfaacb!2s
+                  Dominvs%20Brazilian%20Jiu-Jitsu!5e0!3m2!1sit!2sit!4v1775059252208!5m2!1sit!2sit" width="100%"
+                            height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div id="map-ro" class="map-view" style="display: none;">
+                        <!-- Mappa Rovigo (generica, da sostituire in futuro con la via esatta) -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89774.22067757973!2d11.706176541525752!3d45.066487532394595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477e68e401bce545%3A0xe5a3c0c1b7d52693!2sRovigo%20RO!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
+                            width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dominvs BJJ Ferrara & Rovigo. Tutti i diritti riservati.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
