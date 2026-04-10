@@ -186,12 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
             subtitle: "Bambini & Ragazzi",
             image: "images/course-kids.jpg",
             content: "<p>Il nostro programma per bambini e ragazzi è molto più di un corso sportivo. Attraverso il gioco e la disciplina del BJJ, lavoriamo per fornire ai più giovani gli strumenti psicofisici adatti alla crescita.</p><p>Le tecniche di Jiu Jitsu insegnano come difendersi immobilizzando e controllando l'aggressore senza necessariamente dover sferrare colpi. Questo innalza enormemente il senso di sicurezza personale e disinnesca situazioni di bullismo alla radice.</p><ul><li>Divertimento garantito in un ambiente iper-sicuro</li><li>Forte sviluppo della coordinazione e della mobilità motoria</li><li>Crescita dell'autostima e del rispetto delle regole e del prossimo</li></ul>"
-        },
-        'course-cops': {
-            title: "BJJ Cops",
-            subtitle: "Per le Forze dell'Ordine",
-            image: "images/course-cops.jpg",
-            content: "<p>Questo corso speciale è progettato su misura per gli operatori della sicurezza, per le Forze Armate e per le Forze dell'Ordine che affrontano quotidianamente il rischio dello scontro fisico ravvicinato nel loro lavoro.</p><p>Il programma BJJ Cops si concentra sulla ritenzione dell'arma, sulla sopravvivenza in scenari di rissa, sul controllo a terra del sospetto e sulle tecniche incruente di ammanettamento collaborativo e non collaborativo.</p><ul><li>Garantisce un grado nettamente più alto di sicurezza operativa</li><li>Insegna a controllare efficacemente i soggetti non cooperativi limitando i danni a loro e agli operatori</li><li>Previene problematiche legali tramite l'uso proporzionato e consapevole della forza</li></ul>"
         }
     };
 
