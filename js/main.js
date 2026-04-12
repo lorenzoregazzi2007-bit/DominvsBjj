@@ -186,6 +186,12 @@ document.addEventListener('DOMContentLoaded', () => {
             subtitle: "Bambini & Ragazzi",
             image: "images/course-kids.jpg",
             content: "<p>Il nostro programma per bambini e ragazzi è molto più di un corso sportivo. Attraverso il gioco e la disciplina del BJJ, lavoriamo per fornire ai più giovani gli strumenti psicofisici adatti alla crescita.</p><p>Le tecniche di Jiu Jitsu insegnano come difendersi immobilizzando e controllando l'aggressore senza necessariamente dover sferrare colpi. Questo innalza enormemente il senso di sicurezza personale e disinnesca situazioni di bullismo alla radice.</p><ul><li>Divertimento garantito in un ambiente iper-sicuro</li><li>Forte sviluppo della coordinazione e della mobilità motoria</li><li>Crescita dell'autostima e del rispetto delle regole e del prossimo</li></ul>"
+        },
+        'course-cops': {
+            title: "COPS",
+            subtitle: "Operatori di sicurezza",
+            image: "images/course-cops.jpg",
+            content: "<p>Il programma <strong>COPS</strong> nasce per chi opera in contesti di sicurezza e ordine pubblico: un percorso basato sul Brazilian Jiu Jitsu applicato a immobilizzazioni, controllo da terra e gestione del contatto fisico in modo efficace e misurato.</p><p>Non solo tecnica: lavoriamo su postura, comunicazione, tempi di reazione e decisione sotto stress, per ridurre il rischio di infortuni per tutti e portare a casa situazioni complesse in sicurezza.</p><ul><li>Immobilizzazioni, trasporti e posizioni di controllo adatte al contesto operativo</li><li>Principi di uso della forza proporzionato e de-escalation</li><li>Allenamento progressivo con partner e scenari realistici, in ambiente professionale</li></ul>"
         }
     };
 
