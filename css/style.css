@@ -168,17 +168,21 @@ a {
 }
 
 .logo-img {
-  height: 40px;
-  width: auto;
-  margin-right: 10px;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-right: 12px;
   border-radius: 50%;
   border: 2px solid var(--color-gold);
 }
 
 .logo-img-large {
-  height: 80px;
-  width: auto;
-  margin-bottom: 15px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-bottom: 20px;
   border-radius: 50%;
   border: 3px solid var(--color-gold);
 }
