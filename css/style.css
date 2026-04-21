@@ -167,6 +167,25 @@ a {
   color: var(--color-gold);
 }
 
+.logo-img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--color-gold);
+}
+
+.logo-img-large {
+  height: 80px;
+  width: auto;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid var(--color-gold);
+}
+
+.d-flex { display: flex; }
+.align-items-center { align-items: center; }
+
 .nav-right {
   display: flex;
   align-items: center;
