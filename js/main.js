@@ -183,9 +183,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'course-kids': {
             title: "Kids & Anti-Bullismo",
-            subtitle: "Bambini & Ragazzi",
+            subtitle: "Bambini & Ragazzi (Solo Sede Rovigo)",
             image: "images/course-kids.jpg",
-            content: "<p>Il nostro programma per bambini e ragazzi è molto più di un corso sportivo. Attraverso il gioco e la disciplina del BJJ, lavoriamo per fornire ai più giovani gli strumenti psicofisici adatti alla crescita.</p><p>Le tecniche di Jiu Jitsu insegnano come difendersi immobilizzando e controllando l'aggressore senza necessariamente dover sferrare colpi. Questo innalza enormemente il senso di sicurezza personale e disinnesca situazioni di bullismo alla radice.</p><ul><li>Divertimento garantito in un ambiente iper-sicuro</li><li>Forte sviluppo della coordinazione e della mobilità motoria</li><li>Crescita dell'autostima e del rispetto delle regole e del prossimo</li></ul>"
+            content: "<div style='background: rgba(229, 62, 62, 0.15); border-left: 4px solid #e53e3e; padding: 0.75rem 1rem; border-radius: 6px; margin-bottom: 1.25rem;'><strong style='color: #ff6b6b;'><i class='fas fa-info-circle'></i> Nota Sede:</strong> Questo corso è attivo <strong>esclusivamente presso la sede di Rovigo</strong> (non presente a Ferrara).</div><p>Il nostro programma per bambini e ragazzi è molto più di un corso sportivo. Attraverso il gioco e la disciplina del BJJ, lavoriamo per fornire ai più giovani gli strumenti psicofisici adatti alla crescita.</p><p>Le tecniche di Jiu Jitsu insegnano come difendersi immobilizzando e controllando l'aggressore senza necessariamente dover sferrare colpi. Questo innalza enormemente il senso di sicurezza personale e disinnesca situazioni di bullismo alla radice.</p><ul><li>Divertimento garantito in un ambiente iper-sicuro</li><li>Forte sviluppo della coordinazione e della mobilità motoria</li><li>Crescita dell'autostima e del rispetto delle regole e del prossimo</li><li><strong style='color: #ff6b6b;'>Sede attiva:</strong> Esclusivamente a Rovigo</li></ul>"
         },
         'course-cops': {
             title: "COPS",
