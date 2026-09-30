@@ -1,21 +1,72 @@
-// --- Preloader Logic ---
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        // Piccolo ritardo per godersi l'effetto wow
-        setTimeout(() => {
-            preloader.classList.add('slide-up');
-            
-            // Attiva le animazioni di entrata della hero
-            setTimeout(() => {
-                document.body.classList.add('loaded');
-                setTimeout(() => { preloader.remove(); }, 800);
-            }, 100);
-        }, 1200);
-    } else {
-        document.body.classList.add('loaded');
+// --- Intro Cinematografica ---
+(() => {
+    const intro = document.getElementById('intro');
+    if (!intro) {
+        window.addEventListener('load', () => document.body.classList.add('loaded'));
+        return;
     }
-});
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Intro completa alla prima visita, versione rapida se si ricarica nella stessa sessione
+    let seen = false;
+    try {
+        seen = sessionStorage.getItem('dominvs_intro_seen') === '1';
+        sessionStorage.setItem('dominvs_intro_seen', '1');
+    } catch (e) { /* storage non disponibile: intro completa */ }
+
+    const speed = seen ? 0.55 : 1;
+    if (seen) intro.classList.add('intro--fast');
+
+    const INTRO_MS = reducedMotion ? 700 : 4900 * speed;
+    const MAX_WAIT_AFTER_INTRO_MS = 2500; // non bloccare troppo se le immagini sono lente
+
+    document.body.classList.add('intro-active');
+
+    // Scintille che esplodono quando il logo atterra
+    const sparks = intro.querySelector('.intro-sparks');
+    if (sparks && !reducedMotion) {
+        const count = 16;
+        for (let i = 0; i < count; i++) {
+            const s = document.createElement('i');
+            const angle = (360 / count) * i + (Math.random() * 14 - 7);
+            s.style.setProperty('--a', `${angle}deg`);
+            s.style.setProperty('--len', `${14 + Math.random() * 18}px`);
+            s.style.setProperty('--r0', `${95 + Math.random() * 15}px`);
+            s.style.setProperty('--r1', `${180 + Math.random() * 90}px`);
+            if (i % 3 === 0) s.style.setProperty('--c', '#00c04b');
+            sparks.appendChild(s);
+        }
+    }
+
+    let introDone = false;
+    let pageLoaded = document.readyState === 'complete';
+    let exited = false;
+
+    const exit = () => {
+        if (exited) return;
+        exited = true;
+        intro.classList.add('intro--exit');
+        document.body.classList.remove('intro-active');
+        // La hero entra mentre il sipario si apre
+        setTimeout(() => document.body.classList.add('loaded'), 250);
+        setTimeout(() => intro.remove(), 1400);
+    };
+
+    const tryExit = () => { if (introDone && pageLoaded) exit(); };
+
+    window.addEventListener('load', () => { pageLoaded = true; tryExit(); });
+
+    setTimeout(() => {
+        introDone = true;
+        tryExit();
+        setTimeout(exit, MAX_WAIT_AFTER_INTRO_MS);
+    }, INTRO_MS);
+
+    const skip = document.getElementById('intro-skip');
+    if (skip) skip.addEventListener('click', exit);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') exit(); });
+})();
 
 document.addEventListener('DOMContentLoaded', () => {
     

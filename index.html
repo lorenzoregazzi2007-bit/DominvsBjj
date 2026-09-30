@@ -45,15 +45,55 @@
 </head>
 
 <body>
-    <!-- Preloader Cinematografico -->
-    <div id="preloader" class="preloader">
-        <div class="preloader-content">
-            <h2 class="logo preloader-logo">DOMINVS <span>BJJ</span></h2>
-            <div class="loader-line-wrapper">
-                <div class="loader-line"></div>
+    <!-- Intro Cinematografica: dalla cintura bianca alla nera, poi il logo -->
+    <div id="intro" class="intro" aria-hidden="true">
+        <div class="intro-curtain intro-curtain--left"></div>
+        <div class="intro-curtain intro-curtain--right"></div>
+        <div class="intro-tatami"></div>
+
+        <div class="intro-stage">
+            <div class="intro-glow"></div>
+
+            <!-- Progressione cinture -->
+            <div class="intro-belt-block">
+                <div class="intro-belt">
+                    <div class="intro-belt-bar">
+                        <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span>
+                    </div>
+                </div>
+                <div class="intro-rank">
+                    <span style="--i:0">Branca</span>
+                    <span style="--i:1">Azul</span>
+                    <span style="--i:2">Roxa</span>
+                    <span style="--i:3">Marrom</span>
+                    <span style="--i:4">Preta</span>
+                </div>
             </div>
-            <p class="preloader-text">Preparazione al Tatami...</p>
+
+            <div class="intro-flash"></div>
+
+            <!-- Logo + titolo -->
+            <div class="intro-brand">
+                <div class="intro-logo-wrap">
+                    <div class="intro-ring intro-ring--green"></div>
+                    <div class="intro-ring intro-ring--gold"></div>
+                    <div class="intro-orbit"></div>
+                    <div class="intro-sparks"></div>
+                    <div class="intro-logo">
+                        <img src="images/logo.jpg" alt="">
+                    </div>
+                </div>
+                <h2 class="intro-title">
+                    <span style="--i:0">D</span><span style="--i:1">O</span><span style="--i:2">M</span><span
+                        style="--i:3">I</span><span style="--i:4">N</span><span style="--i:5">V</span><span
+                        style="--i:6">S</span>
+                </h2>
+                <p class="intro-sub"><span class="intro-rule"></span>Brazilian Jiu-Jitsu<span class="intro-rule"></span></p>
+                <p class="intro-cities">Ferrara · Rovigo</p>
+            </div>
         </div>
+
+        <button type="button" class="intro-skip" id="intro-skip">Salta <i class="fas fa-forward"></i></button>
     </div>
 
     <!-- Cookie Banner (GDPR Strict) -->
